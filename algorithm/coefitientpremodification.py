@@ -46,12 +46,12 @@ class CoefitientPreModification(Algorithm):
     def _transform45(self, c: List[float]):
         output: List[float] = []
         output.append(c[0])
-        output.append(0.5*(c[1]/c[2] - 1))
+        output.append(0.5*(c[1]/c[0] - 1))
         l1 = output[1]
         l1l1 = l1*l1
 
         output.append(c[3]/c[0] - l1*c[2]/c[0] + l1l1*(l1 + 1))
-        output.append(c[3]/c[0] - l1*(l1+1) - output[2])
+        output.append(c[2]/c[0] - l1*(l1+1) - output[2])
         output.append(c[4]/c[0] - output[2]*output[3])
 
         if len(c) == 6:
