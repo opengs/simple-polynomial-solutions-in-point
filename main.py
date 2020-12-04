@@ -5,6 +5,7 @@ from algorithm.simple import Simple
 from algorithm.simpleextended import SimpleExtended
 from algorithm.gourner import Gourner
 from algorithm.coefitientpremodification import CoefitientPreModification
+from algorithm.gournerpower2 import GournerPower2
 
 from importer import ImportedData, ImportException, import_from_file
 
@@ -21,7 +22,7 @@ def main():
     algorithms.append(Simple())
     algorithms.append(SimpleExtended())
     algorithms.append(Gourner())
-    algorithms.append(Gourner(2))
+    algorithms.append(GournerPower2())
     algorithms.append(CoefitientPreModification())
 
     # Solve and print
